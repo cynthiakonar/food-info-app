@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ar">
+    package="com.example.ar"
+    xmlns:tools="http://schemas.android.com/tools">
    <application
         android:label="ar"
         android:name="${applicationName}"
@@ -30,5 +31,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <!-- "AR Required" app, requires "Google Play Services for AR" (ARCore)
+         to be installed, as the app does not include any non-AR features. -->
+        <meta-data android:name="com.google.ar.core" android:value="required" tools:replace="android:value"/>
     </application>
 </manifest>
